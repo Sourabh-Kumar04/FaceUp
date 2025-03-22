@@ -1,11 +1,29 @@
 {
     "version": 2,
     "public": true,
-    "builds": [{ "src": "public/**/*", "use": "@vercel/static" }],
+    "builds": [
+      {
+        "src": "index.html",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "sketch.js",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "style.css",
+        "use": "@vercel/static"
+      },
+      {
+        "src": "public/assets/images/*",
+        "use": "@vercel/static"
+      }
+    ],
     "routes": [
-        { "src": "/(.*)", "dest": "/public/index.html" },
-        { "src": "/css/(.*)", "dest": "/public/css/$1" },
-        { "src": "/images/(.*)", "dest": "/public/images/$1" }
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
     ]
-}
+  }
   

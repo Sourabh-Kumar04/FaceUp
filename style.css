@@ -1,0 +1,44 @@
+/* Image Selector Container */
+#imageSelector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: center; /* Center images horizontally */
+}
+
+/* Image Option Styling */
+.image-option {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border 0.3s, transform 0.2s ease-in-out;
+    object-fit: cover; /* Ensures images fill their container properly */
+    border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+/* Hover and Active States */
+.image-option:hover {
+    border-color: #007BFF; /* Highlight on hover */
+    transform: scale(1.05); /* Slightly enlarge the image */
+}
+
+.image-option.selected {
+    border-color: #0056b3; /* Distinct color for selected images */
+    box-shadow: 0 0 10px rgba(0, 91, 187, 0.5); /* Add a soft glow effect */
+}
+
+/* Accessibility: Focus Outline */
+.image-option:focus {
+    outline: 2px dashed #0056b3;
+    outline-offset: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .image-option {
+        width: 60px;
+        height: 60px;
+    }
+}

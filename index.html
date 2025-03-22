@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FaceUp</title>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+        <script src="https://unpkg.com/ml5@latest/dist/ml5.min.js"></script>
+        <!-- <script src="https://unpkg.com/ml5@latest/dist/ml5.js"></script> -->
+
+
+        <!-- <link src="\css\style.css"> -->
+        <!-- <link href="/css/styles.css" type="text/html" /> -->
+        <!-- <link rel="stylesheet" type="text/css" href="/css/styles.css"> -->
+        <link rel="stylesheet" href="/style.css" type="text/css">
+
+
+        <!-- <style>
+            @import url("/css/styles.css");
+        </style>             -->
+
+        <!-- Favicon -->
+        <link rel="icon" href="data:,">
+
+        <!-- <meta charset="UTF-8"/> -->
+    </head>
+    <body>
+        <h1>FaceUp</h1>
+
+        <!-- UI Controls -->
+        <div id="controls">
+            <label><input type="checkbox" id="toggleKeypoints" checked> Keypoints</label>
+            <label><input type="checkbox" id="toggleSkeleton" checked> Skeleton</label>
+
+            <!-- <h3>Select Keypoints:</h3>
+            <label><input type="checkbox" id="nose" checked> Nose</label>
+            <label><input type="checkbox" id="left_eye" checked> Left Eye</label>
+            <label><input type="checkbox" id="right_eye" checked> Right Eye</label>
+            <label><input type="checkbox" id="left_ear" checked> Left Ear</label>
+            <label><input type="checkbox" id="right_ear" checked> Right Ear</label>
+            <label><input type="checkbox" id="left_shoulfer" checked> Left Shoulder</label>
+            <label><input type="checkbox" id="right_shoulder" checked> Right Shoulder</label>
+            <label><input type="checkbox" id="left_elbow" checked> Left Elbow</label>
+            <label><input type="checkbox" id="right_elbow" checked> Right Elbow</label>
+            <label><input type="checkbox" id="left_wrist" checked> Left Wrist</label>
+            <label><input type="checkbox" id="right_wrist" checked> Right Wrist</label>
+            <label><input type="checkbox" id="left_knee" checked> Left Knee</label>
+            <label><input type="checkbox" id="right_knee" checked> Right Knee</label>
+            <label><input type="checkbox" id="left_hip" checked> Left Hip</label>
+            <label><input type="checkbox" id="right_hip" checked> Right Hip</label>
+            <label><input type="checkbox" id="left_ankle" checked> Left Ankle</label>
+            <label><input type="checkbox" id="right_ankle" checked> Right Ankle</label> -->
+        </div>
+
+        <!-- Image Selection -->
+        <h3>Select an Image:</h3>
+        <div id="imageSelector">
+            <img src="/public/assets/images/glass.png" class="image-option" data-image="/public/assets/images/glass.png">
+            <img src="/public/assets/images/dog.png" class="image-option" data-image="/public/assets/images/dog.png">
+            <img src="/public/assets/images/eye.png" class="image-option" data-image="/public/assets/images/eye.png">
+            <img src="/public/assets/images/cat.png" class="image-option" data-image="/public/assets/images/cat.png">
+            <img src="/public/assets/images/evil_horn_eye.png" class="image-option" data-image="/public/assets/images/evil_horn_eye.png">
+            <img src="/public/assets/images/flower_hairband.png" class="image-option" data-image="/public/assets/images/flower_hairband.png">
+            <img src="/public/assets/images/neon_facemask.png" class="image-option" data-image="/public/assets/images/neon_facemask.png">
+            <img src="/public/assets/images/skeleton_mask.png" class="image-option" data-image="/public/assets/images/skeleton_mask.png">
+            <img src="/public/assets/images/bald.png" class="image-option" data-image="/public/assets/images/bald.png">
+            <img src="/public/assets/images/bald_hair.png" class="image-option" data-image="/public/assets/images/bald_hair.png">
+        </div>
+        
+    <!-- External JavaScript -->
+    <script src="/sketch.js"></script>
+
+    </body>
+</html>
