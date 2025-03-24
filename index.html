@@ -28,10 +28,15 @@
         <!-- <meta charset="UTF-8"/> -->
     </head>
     <body>
-        <h1>FaceUp</h1>
+        <header>
+            <h1>FaceUp</h1>
+            <h2>Face Detection and Image Overlay</h2>
+        </header>
+        
 
         <!-- UI Controls -->
         <div id="controls">
+            <h2>Select Skeleton & KeyPoints</h2>
             <label><input type="checkbox" id="toggleKeypoints" checked> Keypoints</label>
             <label><input type="checkbox" id="toggleSkeleton" checked> Skeleton</label>
 
@@ -55,24 +60,31 @@
             <label><input type="checkbox" id="right_ankle" checked> Right Ankle</label> -->
         </div>
 
-        <!-- Image Selection -->
-        <h3>Select an Image:</h3>
-        <div id="imageSelector">
-            <img src="/images/glass.png" class="image-option" data-image="/images/glass.png">
-            <img src="/images/dog.png" class="image-option" data-image="/images/dog.png">
-            <img src="/images/eye.png" class="image-option" data-image="/images/eye.png">
-            <img src="/images/cat.png" class="image-option" data-image="/images/cat.png">
-            <img src="/images/evil_horn_eye.png" class="image-option" data-image="/images/evil_horn_eye.png">
-            <img src="/images/flower_hairband.png" class="image-option" data-image="/images/flower_hairband.png">
-            <img src="/images/neon_facemask.png" class="image-option" data-image="/images/neon_facemask.png">
-            <img src="/images/skeleton_mask.png" class="image-option" data-image="/images/skeleton_mask.png">
-            <img src="/images/bald.png" class="image-option" data-image="/images/bald.png">
-            <img src="/images/bald_hair.png" class="image-option" data-image="/images/bald_hair.png">
+        <div id="main-content">
+            <section>
+                <h2>Select an Image:</h2>
+                <div id="imageSelector">
+                    <img src="/images/glass.png" class="image-option" data-image="/images/glass.png">
+                    <img src="/images/dog.png" class="image-option" data-image="/images/dog.png">
+                    <img src="/images/eye.png" class="image-option" data-image="/images/eye.png">
+                    <img src="/images/cat.png" class="image-option" data-image="/images/cat.png">
+                    <img src="/images/evil_horn_eye.png" class="image-option" data-image="/images/evil_horn_eye.png">
+                    <img src="/images/flower_hairband.png" class="image-option" data-image="/images/flower_hairband.png">
+                    <img src="/images/neon_facemask.png" class="image-option" data-image="/images/neon_facemask.png">
+                    <img src="/images/skeleton_mask.png" class="image-option" data-image="/images/skeleton_mask.png">
+                    <img src="/images/bald.png" class="image-option" data-image="/images/bald.png">
+                    <img src="/images/bald_hair.png" class="image-option" data-image="/images/bald_hair.png">
+                </div>
+            </section>
         </div>
+
+        <section class="video-section">
+            <video id="webcam" autoplay></video>
+        </section>
         
         <footer>
             <p>© 2025 FaceUp. All rights reserved.</p>
-            <p>Developed by <a href="https://linkedin.com/in/sourabh-kumar04" target="_blank">Sourabh Kumar</a></p>
+            <p>Developed by <a href="https://linkedin.com/in/sourabh-kumar04" target="_blank">Sourabh Kumar</a> with ❤️</p>
         </footer>
         
 
