@@ -3,8 +3,8 @@ let bodyPose;
 let poses = [];
 let connections;
 
-let showKeypoints = false;
-let showSkeleton = false;
+let showKeypoints = true;
+let showSkeleton = true;
 let selectedImage = null;
 let overlayImage;
 
