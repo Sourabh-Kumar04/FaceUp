@@ -86,6 +86,43 @@ label:hover {
     box-shadow: 0 0 15px rgba(255, 64, 129, 0.7);
 }
 
+/* Image Selector Container */
+#imageSelector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 15px auto; /* Adds space between selector and video */
+    justify-content: center;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.08); /* Slight contrast for better visibility */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 90%;
+}
+
+
+
+/* Image Option Styling */
+body {
+    transition: all 0.3s ease-in-out;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(0.85) contrast(1.1);
+    background: #1f1f1f;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), -4px -4px 10px rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+/* Fix for Black Background Images */
+
+
+.image-option[data-black-bg] {
+    background: rgba(255, 255, 255, 0.2); /* Slight grayish background for contrast */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* Soft glow for visibility */
+}
+
 /* Video Section */
 .video-section {
     display: flex;
