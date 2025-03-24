@@ -6,23 +6,15 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
-/* Header Styling */
-header {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 24px;
+/* Heading Styling */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    margin-top: 10px;
 }
 
 /* Checkbox & Labels */
@@ -39,28 +31,22 @@ label:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Main Content */
-#main-content {
-    flex: 1;
-    padding: 20px;
-}
-
 /* Image Selector Container */
-.image-container {
+#imageSelector {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
-    margin: 15px auto;
+    margin: 15px auto; /* Adds space between selector and video */
     justify-content: center;
     padding: 12px;
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.08); /* Slight contrast for better visibility */
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     max-width: 90%;
 }
 
 /* Image Option Styling */
-.image-container img {
+.image-option {
     width: 90px;
     height: 90px;
     cursor: pointer;
@@ -73,32 +59,39 @@ label:hover {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4), -4px -4px 10px rgba(255, 255, 255, 0.1);
 }
 
+/* Fix for Black Background Images */
+.image-option[data-black-bg] {
+    background: rgba(255, 255, 255, 0.2); /* Slight grayish background for contrast */
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.3); /* Soft glow for visibility */
+}
+
 /* Hover & Active Effects */
-.image-container img:hover {
+.image-option:hover {
     border-color: #00aaff;
     transform: scale(1.1);
     filter: brightness(1);
     box-shadow: 0 0 15px rgba(0, 170, 255, 0.6);
 }
 
-.image-container img.selected {
+.image-option.selected {
     border-color: #ff4081;
     box-shadow: 0 0 15px rgba(255, 64, 129, 0.7);
 }
 
-/* Video Section */
-.video-section {
+/* Video Container */
+#videoContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 25px; /* Space between images and video */
     padding: 10px;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
-#webcam {
+/* Video Styling */
+video {
     border-radius: 10px;
     width: 80%;
     max-width: 700px;
@@ -125,56 +118,29 @@ button:hover {
     box-shadow: 0 4px 15px rgba(0, 86, 179, 0.6);
 }
 
-/* Footer Styling */
-footer {
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    text-align: center;
-    padding: 15px 10px;
-    font-size: 0.9rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: 30px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Footer Links */
-footer a {
-    color: #00aaff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease-in-out;
-}
-
-footer a:hover {
-    color: #ff4081;
-}
-
 /* Responsive Design */
 @media (max-width: 768px) {
-    .image-container img {
+    .image-option {
         width: 70px;
         height: 70px;
     }
-    #webcam {
+    #imageSelector {
+        gap: 8px;
+    }
+    video {
         width: 95%;
     }
 }
 
 @media (max-width: 480px) {
-    .image-container img {
+    .image-option {
         width: 60px;
         height: 60px;
     }
-    header h1 {
+    h1 {
         font-size: 1.5rem;
     }
     button {
         padding: 8px 16px;
-    }
-    footer {
-        font-size: 0.8rem;
-        padding: 12px;
     }
 }
