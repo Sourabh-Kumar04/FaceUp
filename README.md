@@ -1,9 +1,10 @@
 # FaceUp
 
-FaceUp is a web-based application that allows users to overlay different facial accessories on their images using **p5.js** and **ml5.js** for pose detection. The project provides an interactive UI where users can select different image overlays to enhance their photos.
+FaceUp is a web-based application that allows users to overlay different facial accessories on their images using **p5.js** and **ml5.js** for pose detection. The project detects **13 keypoints of the body** and uses **facial key points** to accurately overlay face accessories.
 
 ## 🚀 Features
-- Real-time face keypoint detection using **ml5.js**
+- **Full-body keypoint detection** using **ml5.js**
+- **Facial keypoint tracking** for accurate placement of overlays
 - Various face accessories (glasses, masks, etc.) to choose from
 - Interactive UI with toggleable keypoints and skeleton visualization
 - Simple and lightweight, built with HTML, CSS, and JavaScript
@@ -15,7 +16,7 @@ FaceUp/
 ├── public/
 │   └── images/       # Image assets (overlays like glasses, masks, etc.)
 ├── src/
-│   ├── sketch.js     # JavaScript file handling face detection and image overlays
+│   ├── sketch.js     # JavaScript file handling pose detection and image overlays
 │   └── style.css     # Styling for the project
 └── README.md         # Project documentation
 ```
@@ -25,12 +26,10 @@ FaceUp/
    ```sh
    git clone https://github.com/Sourabh-Kumar04/FaceUp.git
    ```
-
 2. Navigate to the project directory:
    ```sh
    cd FaceUp
    ```
-
 3. Open `index.html` in a browser to run the application locally.
 
 ## 🚀 Deployment
@@ -48,11 +47,12 @@ Follow the CLI instructions to complete deployment.
 ## 📷 Usage
 - Open the webpage.
 - Select an image overlay from the provided options.
-- Enable or disable face keypoints and skeleton for visualization.
+- Enable or disable full-body keypoints and skeleton for visualization.
+- Apply facial overlays (glasses, masks, etc.) precisely using facial keypoints.
 
 ## 🛠️ Technologies Used
 - **p5.js** - For canvas rendering
-- **ml5.js** - For face keypoint detection
+- **ml5.js** - For body and face keypoint detection
 - **HTML, CSS, JavaScript** - Frontend development
 
 ## 📜 License
